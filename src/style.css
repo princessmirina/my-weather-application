@@ -65,14 +65,14 @@ strong {
 }
 .weather-app-temp {
   font-size: 88px;
+  line-height: 88px;
   font-weight: bold;
-  margin-left: 10px;
 }
 .weather-app-icon {
-  margin-top: 20px;
-  font-size: 44px;
+  width: 88px;
+  min-height: 88px;
 }
 .weather-app-unit {
   font-size: 28px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
