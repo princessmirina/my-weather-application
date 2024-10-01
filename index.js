@@ -59,7 +59,29 @@ function weatherApp(event) {
   cityName(weatherAppInput.value);
 }
 
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-details">
+            <div class="weather-forecast-day">${day}</div>
+            <div class="weather-forecast-icon">⛅</div>
+            <div class="weather-forecast-degree">
+              <div class="weather-forecast-unit"><strong>15&#176;</strong></div>
+              <div class="weather-forecast-unit2">9&#176;</div>
+            </div>
+          </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let weatherAppForm = document.querySelector("#weather-app-form");
 weatherAppForm.addEventListener("submit", weatherApp);
 
 cityName("Paris");
+displayForecast();
