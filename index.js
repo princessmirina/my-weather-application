@@ -26,7 +26,7 @@ function refreshTemperature(response) {
   let date = new Date(response.data.time * 1000);
   timeElemetnt.innerHTML = formatDate(date);
 
-  // update weather-icon
+  // update forecast-icon
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
